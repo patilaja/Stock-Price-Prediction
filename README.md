@@ -87,15 +87,15 @@ Stock Prdiction polinomial forecast line fit:
 
 Predicted ~ Actual stock data:
 
-![Images/st1.JPG](Images/st1.JPG)
+![Images/St1.JPG](Images/St1.JPG)
 
 30 Day JPM stock forecast view:
 
-![Images/st2.JPG](Images/st2.JPG)
+![Images/St2.JPG](Images/St2.JPG)
 
 Stock prediction with original stock data
 
-![Images/st3.JPG](Images/st3.JPG)
+![Images/St3.JPG](Images/St3.JPG)
 
 ### Conclusion:
 
@@ -105,7 +105,7 @@ Stock prediction with original stock data
 ### FB Prophet Model:
 - Prophet is open source software released by Facebook and commonly used procedure for forecasting time series data based on an additive model where non-linear trends are fit with yearly, weekly, and daily seasonality, plus holiday effects. It works best with time series that have strong seasonal effects and several seasons of historical data. It provides us with the ability to make time series predictions with good accuracy using simple intuitive parameters.
 
-![Images/fb1.JPG](Images/fb1.JPG)
+![Images/Fb1.JPG](Images/Fb1.JPG)
 
 #### Conclusion:
 
