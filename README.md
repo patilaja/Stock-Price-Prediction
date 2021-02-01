@@ -54,13 +54,9 @@ Model Performance Matrix:
 
 #### Conclusion:
 
-- X-axis of the graph shows the dates from 2002 through 2020 and the Y-axis shows the market closing price.
+- The graph in the blue color displays the close price history from year 2000 to year 2020. The graph in the red represents the best fit linear equation for the known data. The graph in the green is the future predictions for next two years.
 
-- The graph in the blue color displays the close price history from year 2002 to year 2020. The graph in the red represents the best fit linear equation for the known data. The graph in the green is the future predictions for next two years.
-
-- As we know linear regression line has positive slope means price will go up which is simply not realistic. Note that we have used only date as a feature to predict the stock price. A simple linear equation with first degree polynomial y = mx + c cannot realistically mimic the stock market behavior.
-
--JPM Closing price on 2022-12-09 would be around $98.57
+- JPM stock predicted closing price on 2022-12-09 is $99.75
 
 ### Polynomial Regression Model:
 - Polynomial regression fits a nonlinear relationship between the independent variable values and the corresponding conditional mean of the dependent variable.
@@ -73,13 +69,11 @@ Stock Prediction polynomial forecast line fit:
 
 #### Conclusion:
 
-- JPM Stock price on 2022-12-09 would be $159.13
+- JPM stock predicted closing price on 2022-12-09 is $157.50
 
-- I think we have moved a little bit closer to reality in terms of fitting the curve. Model shows the stock price will increase over a period of time.
+- I think, we have moved little bit closer to the reality in terms of fitting the curve.
 
-- Will this be reality? Probably not, we need to look at techniques like FB prophet, ARIMA or LSTM to do the time series predictions.
-
-- These stats don't really tell us much by themselves. We may get an intuition for r-squared so that may give you a level of confidence in the models. However, even this metric has problems not to mention does not tell us much about the practicality of this signal from a trading point of view.
+- Will this be reality? Probably not, let's to look at the techniques like FB prophet, ARIMA or LSTM that specific to time series data predictions.
 
 ### Stacked LSTM Model
 
@@ -100,7 +94,7 @@ Stock prediction with original stock data
 ### Conclusion:
 
 - In the LSTM stacked model, we used a 100 day time step to predict 101st day stock price and so on. Error in first day prediction will multiply  for the subsequent days resulting in the overall wrong prediction. 
--  Model predicts JPM stock price 01/08/2021 will be $86.96. Model shows a downward stock price prediction.
+- JPM stock predicted closing price on 2021-01-08 is $131.0.
 
 ### FB Prophet Model:
 - Prophet is open source software released by Facebook and commonly used procedure for forecasting time series data based on an additive model where non-linear trends are fit with yearly, weekly, and daily seasonality, plus holiday effects. It works best with time series that have strong seasonal effects and several seasons of historical data. It provides us with the ability to make time series predictions with good accuracy using simple intuitive parameters.
@@ -111,7 +105,7 @@ Stock prediction with original stock data
 
 - FB Prophet time series forecasting algorithms did not yield dramatically different result.Stock prediction is too complex to be solved by simple techniques.
 
-- JPM Closing price on 2022-12-10 would be around $134.38
+- JPM predicted closing price on 2022-12-09 is $138.32
 
 ### ARIMA (AutoRegressive Integrated Moving Average) Model:
 * 'Auto Regressive' in ARIMA means it is a linear regression model that uses its own lags as predictors. Linear regression models, as you know, work best when the predictors are not correlated and are independent of each other.
@@ -152,22 +146,27 @@ Residual and density:
 Stock Price Prediction:
 
 ![Images/ar5.JPG](Images/ar5.JPG)
+
+#### Conclusion:
+- The graph in the blue color displays the close price history of traing data and red represents close price history of test data. 
+- Yellowgreen represents the future JPM stock price predictions for next two years.
+- JPM Closing price on 2022-12-09 would be around $130.27
  
 #### Conclusion:
 ##### Linear Regression:
-- RMSE (root-mean-square error) is: 16.75
-- Mean Absolute Error is: 13.46
-- JPM Closing price on 2022-12-09 would be around  $98.57
+- RMSE (root-mean-square error) is: 16.57
+- Mean Absolute Error is: 13.23
+- JPM stock predicted closing price on 2022-12-09 is $99.75
 
 ##### Polynomial Regression:
-- RMSE (root-mean-square error) is: 9.59
-- Mean Absolute Error is: 7.19
-- JPM stock predicted closing price on 2022-12-09 is $159.13
+- RMSE (root-mean-square error) is: 9.60
+- Mean Absolute Error is: 7.23
+- JPM stock predicted closing price on 2022-12-09 is $157.50
 
 ##### FB Prophet:
-- RMSE (root-mean-square error) is: 7.05
-- Mean Absolute Error is: 4.83
-- JPM predicted closing price on 2022-12-09 is $138.32
+- RMSE (root-mean-square error) is: 4.13
+- Mean Absolute Error is: 3.18
+- JPM stock predicted closing price on 2022-12-09 is $138.32
 
 ##### Stacked LSTM:
 - RMSE (root-mean-square error) is: 95.0
@@ -175,16 +174,16 @@ Stock Price Prediction:
 - JPM stock predicted closing price on 2021-01-08 is $131.0
 
 ##### ARIMA Model:
-- RMSE (root-mean-square error) is:20.65
-- Mean Absolute Error is:16.33
+- RMSE (root-mean-square error) is: 20.65
+- Mean Absolute Error is: 16.33
 - JPM stock predicted closing price on 2022-12-09 is $130.27
 
 ### Summary:
-- Linear Model: JPM Closing price on 2022-12-09 would be around $98.57
-- Polynomial Model:- JPM Stock price on 2022-12-09 would be around $159.13
-- Stacked LSTM Model: JPM stock price 21-01-08 will be $86.96. Model shows a downward stock price prediction.
-- FB Prophet Model: JPM Closing price on 2022-12-10 would be around $134.38
-- Auto Arima Model: JPM Closing price on 2022-12-09 would be around $130.27
+- Linear Regression Model: JPM stock predicted closing price on 2022-12-09 is $99.75
+- Polynomial Rgression Model: JPM stock predicted closing price on 2022-12-09 is $157.50
+- Stacked LSTM Model: JPM stock predicted closing price on 2021-01-08 is $131.0
+- FB Prophet Model: JPM stock predicted closing price on 2022-12-09 is $138.32
+- Auto Arima Model: JPM stock predicted closing price on 2022-12-09 is $130.27
 
 #### The Root-Mean-Square Error (RMSE): 
 - RMSE is a measure frequently used for assessing the accuracy of prediction obtained by a model. It measures the differences or residuals between actual and predicted values. The metric compares prediction errors of different models for a particular data and not between datasets.
@@ -194,9 +193,9 @@ Stock Price Prediction:
 
 - The ARIMA and LSTM algorithms that were developed for forecasting the time series are based on rolling forecasting. The rolling forecasting  focuses on a single forecast, i.e., the next data point to predict, for each data set. 
 
-- Comparing all the models, FB Prophet model gave the lowest RMSE of 7.05 and  Mean Absolute Error is: 4.83
+- Comparing all the models, FB Prophet model gave the lowest RMSE of 4.13 and  Mean Absolute Error is: 3.18
 
-- FB Prophet  Model predicted JPM stock closing price on 2022-12-09 will be $138.32
+- FB Prophet  Model predicted JPM Closing price on 2022-12-09 would be around $138.32
 
 
 #### Credits
